@@ -5,10 +5,11 @@
 ## 规则
 
 - 源文件（`.tex`）都放在 **`src/` 目录**，保持根目录整洁
-- `src/` 下的**每个 `.tex` 文件**都会被自动编译成**同名 `.pdf`**，输出到**仓库根目录**，始终保持最新
-- 例如 `src/Ruixing Liu_Resume.tex` → 根目录 `Ruixing Liu_Resume.pdf`
-- 新增一份简历 = 在 `src/` 新增一个 `.tex` 文件，无需改任何配置
-- 重命名简历 = 重命名 `src/` 里的 `.tex` 文件（记得删掉根目录的旧 PDF）
+- 每个 `.tex` 都会被自动编译成**同名 `.pdf`**，输出到**仓库根目录**，始终保持最新
+- 英文简历放 `src/`（pdflatex）；**中文简历放 `src/zh/`**（xelatex + ctex，中文需要）
+- 例如 `src/Ruixing Liu_Resume.tex` → 根目录 `Ruixing Liu_Resume.pdf`；`src/zh/刘瑞行简历.tex` → 根目录 `刘瑞行简历.pdf`
+- 新增一份简历 = 新增一个 `.tex`（英文进 `src/`，中文进 `src/zh/`），无需改任何配置
+- 重命名简历 = 重命名对应 `.tex` 文件（记得删掉根目录的旧 PDF）
 
 ## 用法
 

@@ -1,0 +1,133 @@
+%% 中文简历 — 用 xelatex + ctex 编译 (CI 走 src/zh/ 的 xelatex 步骤)
+%% 与英文简历同款模板 (Jake's Resume) 的 CJK 版本
+\documentclass[letterpaper,11pt,fontset=fandol]{ctexart}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+\linespread{0.97}\selectfont
+\raggedbottom
+\justifying
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}{
+  \vspace{-8pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{\item\small{{#1\vspace{-3pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \textbf{#1} \hfill #2 \\
+    \textit{\small#3} \hfill \textit{\small #4} \vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge 刘瑞行} \\ \vspace{2pt}
+    \small (+86) 185-1056-6852 $|$ \href{mailto:ruixingliu2027@u.northwestern.edu}{ruixingliu2027@u.northwestern.edu} $|$ 北京市海淀区翠微路 21 号院 2-223
+\end{center}
+
+\section{教育背景}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {美国西北大学 $|$ 主修语言学，辅修西班牙语}{预计 2025.9 -- 2027.6}
+      {转学自浙江大学，准大三在读}{}
+    \resumeSubheading
+      {浙江大学 $|$ 主修西班牙语语言文学，辅修法学}{2023.8 -- 2025.8}
+      {GPA 4.05/4.3，排名前 15\%}{}
+  \resumeSubHeadingListEnd
+
+\section{技术能力}
+  \resumeItemListStart
+    \resumeItem{\textbf{自然语言处理}：熟悉语料清洗与标注，掌握多语言语法结构分析，能完成语言数据建库与结构优化}
+    \resumeItem{\textbf{Prompt 工程}：熟练编写提示词以适配任务需求，具备 ChatGPT、Claude 等多轮设计与输出调控经验}
+    \resumeItem{\textbf{编程基础}：掌握 Python、R 与 HTML，能使用脚本进行文本处理、批量标注、数据建模与网页开发}
+    \resumeItem{\textbf{语音工程}：熟练使用 Praat、ELAN 等工具，掌握音系转写规则，具备语音标注、对齐与分析能力}
+    \resumeItem{\textbf{外语能力}：中英西三语能力，托福 113，西班牙语专四背景，能胜任多语种翻译与本地化处理任务}
+  \resumeItemListEnd
+
+\section{项目与实习经历}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {ANIMATOR SUPPORTERS}{2024.4 -- 2025.6}
+      {翻译}{}
+      \resumeItemListStart
+        \resumeItem{独立完成 60 余页英文采访稿至西班牙语翻译，支持组织拓展拉美与西语地区倡议传播覆盖}
+        \resumeItem{运用 Trados、DeepL 及 ChatGPT 等辅助工具进行翻译建库与术语统一，保障语言风格一致性}
+        \resumeItem{结合上下文语境构建术语表与翻译记忆，提升长文本处理效率与本地化表达自然度}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {金杜律师事务所 $|$ King and Wood Mallesons}{2024.6 -- 2024.8}
+      {律师助理}{}
+      \resumeItemListStart
+        \resumeItem{协助推进五起跨境航空融资项目，负责客户需求归纳与法律检索，支持交易结构合规落地}
+        \resumeItem{参与多轮中英文合同条款修订、校对与审阅，深入理解客户诉求与风险考量逻辑}
+        \resumeItem{熟练使用 Excel 工具进行报表及数据分析，支持完成融资项目前期的尽职调查报告}
+        \resumeItem{深度参与与客户的中英文邮件及电话沟通，保障多方理解一致，推动项目高效协作}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {美国宾夕法尼亚大学}{2024.9 -- 2025.5}
+      {本科交换生}{}
+      \resumeItemListStart
+        \resumeItem{GPA 3.95/4.0，获得三名教授推荐信}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {美国宾夕法尼亚大学}{2024.10 -- 2025.3}
+      {研究助理（导师：Eugene Buckley，\href{https://www.ling.upenn.edu/~gene/home.html}{个人主页}）}{}
+      \resumeItemListStart
+        \resumeItem{独立编写 Python 脚本并使用 HTML 优化濒危语言 Kashaya 语料库结构，提升数据检索与研究效率}
+        \resumeItem{协助语音与词素结构分析任务，整理标注数据、提出结构改写建议，支持语料标准化与语言资源建设}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{个人作品}
+  \resumeItemListStart
+    \resumeItem{个人自创语言：\href{https://cheluria.vercel.app/}{https://cheluria.vercel.app/}}
+    \resumeItem{个人濒危语言保护项目：\href{https://chinaendangereddialects.vercel.app/}{https://chinaendangereddialects.vercel.app/}}
+  \resumeItemListEnd
+
+\section{社区参与 / 实践其他}
+  \resumeItemListStart
+    \resumeItem{浙江大学外国语学院学生会成员（2023--2024）}
+    \resumeItem{美国宾夕法尼亚大学语言学学会成员（2024--2025）}
+    \resumeItem{美国宾夕法尼亚大学 2025 春学期 Tour Guide 志愿者}
+  \resumeItemListEnd
+
+\end{document}

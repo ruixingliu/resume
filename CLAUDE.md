@@ -3,6 +3,8 @@
 - GitHub: https://github.com/ruixingliu/resume (public)
 - 目录结构: **源文件 `.tex` 和 `.gitignore` 都放在 `src/`**, 编译出的 **`.pdf` 输出到仓库根目录**。
   根目录只留: 编译好的 PDF + 说明用的 `.md` + 隐藏的 `.github/`。
+- 英文/拉丁字母简历放 `src/` (用 pdflatex 编); **中文/CJK 简历放 `src/zh/`**
+  (用 xelatex + ctex + fandol 字体编, 因为 pdflatex 编不了中文)。两者 PDF 都输出到根目录。
 - **注意**: `.github/workflows/` 是 GitHub Actions 硬性要求的固定路径, **不能挪进子文件夹**,
   否则自动编译失效; 它是隐藏文件夹, 不碍眼。
 - 机制: push 到 main 后, GitHub Actions 自动把 **`src/` 里每个 `.tex`** 编译成
@@ -12,7 +14,7 @@
 
 ## 铁律
 - 根目录的 PDF 由 CI 生成和提交, **永远不要手动 commit 这些 PDF**。
-- 新增一份简历 = 在 `src/` 新增一个 `.tex`, 零配置; 重命名 = 重命名 `src/` 里的 `.tex` 并删掉根目录旧 PDF。
+- 新增一份简历 = 新增一个 `.tex` (英文放 `src/`, 中文放 `src/zh/`), 零配置; 重命名 = 重命名对应 `.tex` 并删掉根目录旧 PDF。
 - 文件名之间不能只有大小写之差 (Windows/macOS 文件系统不区分大小写)。
 - 不编造任何经历、数字、日期; 只用用户提供的内容。每份简历保持一页。
 
@@ -31,4 +33,5 @@
 ## PDF 直链 (永远指向最新版)
 - https://github.com/ruixingliu/resume/raw/main/Ruixing%20Liu_Resume.pdf
 - https://github.com/ruixingliu/resume/raw/main/Ruixing%20Liu_Resume_2.pdf
-- 规律: `https://github.com/ruixingliu/resume/raw/main/<文件名>.pdf` (空格写成 %20)
+- https://github.com/ruixingliu/resume/raw/main/%E5%88%98%E7%91%9E%E8%A1%8C%E7%AE%80%E5%8E%86.pdf (中文简历)
+- 规律: `https://github.com/ruixingliu/resume/raw/main/<文件名>.pdf` (空格写成 %20, 中文按 UTF-8 百分号编码)
