@@ -1,0 +1,183 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.1in}
+
+\urlstyle{same}
+\linespread{0.97}\selectfont
+\raggedbottom
+\justifying
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% ATS-safe heading: single line with \hfill instead of tabular* columns
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \textbf{#1} \hfill #2 \\
+    \textit{\small#3} \hfill \textit{\small #4} \vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \textit{\small#1} \hfill \textit{\small #2} \vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \small#1 \hfill #2 \vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ruixing Liu} \\ \vspace{1pt}
+    \small +1 510-703-9340 $|$ \href{mailto:ruixingliu2027@u.northwestern.edu}{{ruixingliu2027@u.northwestern.edu}} $|$
+    \href{https://linkedin.com/in/ruixing46}{{linkedin.com/in/ruixing46}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northwestern University}{Evanston, IL}
+      {B.A. in Economics, Cognitive Science and Political Science}{Expected Jun 2027}
+    \resumeItemListStart
+        \resumeItem{GPA: 4.0/4.0, Dean's List (All Quarters)}
+        \resumeItem{Courses: Causal Inference, Randomized Experiments, Statistical Research Methods, Applied Econometrics, Microeconomics, Behavioral Economics, Data Visualization, Data Science for Social Science}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Pennsylvania}{Philadelphia, PA}
+      {Visiting Student}{Aug 2024 -- Jun 2025}
+      \resumeItemListStart
+        \resumeItem{GPA: 3.93/4.0}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{Research \& Analytical Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Northwestern Institute for Policy Research (IPR)}{Evanston, IL}
+      {Summer Research Assistant (PI: Prof. Bernard Black)}{Jun 2026 -- Present}
+      % TODO: add bullets once finalized
+      % \resumeItemListStart
+      %   \resumeItem{}
+      %   \resumeItem{}
+      % \resumeItemListEnd
+
+    \resumeSubheading
+      {Northwestern Buffett Institute for Global Affairs}{Evanston, IL}
+      {Undergraduate Research Fellow, 2026--27 Cohort}{Jun 2026 -- Present}
+      % TODO: add bullets once finalized
+      % \resumeItemListStart
+      %   \resumeItem{}
+      %   \resumeItem{}
+      % \resumeItemListEnd
+
+    \resumeSubheading
+      {Northwestern University Weinberg College Academic Year Research Grant}{Evanston, IL}
+      {Independent Researcher (PI: \href{https://www.law.northwestern.edu/faculty/profiles/jonathankoehler/}{Prof. Jonathan Koehler})}{Mar 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Constructing an original dataset of 300--400 federal IP Daubert rulings to test whether judges rely on expert credentials as heuristic shortcuts rather than systematically applying reliability criteria}
+        \resumeItem{Building a semi-automated extraction pipeline using R and Claude Code to parse judicial opinions and code variables including expert education, firm affiliation, methodology complexity, and admissibility outcome}
+        \resumeItem{Estimating logistic regression models in R and Stata to assess how expert credentials and methodology complexity predict admissibility outcomes, incorporating interaction terms and robustness checks}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {King \& Wood Mallesons}{Beijing, China}
+      {Legal Intern}{Jun 2024 -- Aug 2024}
+      \resumeItemListStart
+        \resumeItem{Conducted legal and regulatory research on international aircraft finance frameworks (ICAO, Cape Town Convention) using Westlaw and LexisNexis; Analyzed over 15 precedent cases and formed thorough legal memos to support multi-million-dollar leasing transactions and advised on rule applications in delivery, sub-leasing, and fund transfers}
+        \resumeItem{Utilized Excel to reconcile and reorganize large client spreadsheets by building comparison sheets that reduced manual verification time by 40\%, improved record accuracy, and consolidated verified data into structured reference tables}
+        \resumeItem{Performed detailed legal due diligence for six cross-border projects by analyzing clients' bylaws, shareholder structures, and investor records; identified key risks and inconsistencies to support transaction structuring decisions}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cook County State's Attorney's Office}{Chicago, IL}
+      {Legal Intern}{Jan 2026 -- Apr 2026}
+      \resumeItemListStart
+        \resumeItem{Performed quantitative financial assessments for child support obligations by synthesizing multi-factor variables (income, healthcare costs, COLA), ensuring strict adherence to statutory guidelines}
+        \resumeItem{Drafted comprehensive responses to legal motions by reconciling evidentiary records and distilling complex factual observations into targeted documentation for lead attorney review}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EXTRACURRICULAR-----------
+\section{Extracurricular}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The Daily Northwestern}{Evanston, IL}
+      {Data Reporter}{Sep 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Conducted quantitative analysis on district-level educational data, identifying longitudinal trends in proficiency rates and demographic shifts to support evidence-based reporting}
+        \resumeItem{Developed 15+ interactive data visualizations using R (ggplot2), Tableau, and PowerBI, transforming complex raw datasets into accessible insights for public readership}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS (original, unchanged)-----------
+\section{Skills, Training \& Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Mandarin (Native), Spanish (Intermediate) $|$ \textbf {Programming Languages}{: Python, HTML/CSS, R} \\
+     \textbf{Data Visualization \& Analytics}{: Tableau, PowerBI, SQL, Stata} $|$
+     \textbf{Legal Research}{: Westlaw, LexisNexis} \\
+     \textbf{Developer Tools}{: Github, VS Code, Visual Studio, Figma, Microsoft Office Suite \& Google Workspace, Canvas} \\
+    }}
+ \end{itemize}
+
+\end{document}

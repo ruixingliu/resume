@@ -1,4 +1,4 @@
-name: Build LaTeX resume
+name: Build resumes
 
 on:
   push:
@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build-resumes
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,24 +19,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile main.tex
+      - name: Compile every .tex resume in the repo root
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
+          root_file: "*.tex"
+          glob_root_file: true
 
-      - name: Rename PDF
-        run: cp main.pdf Resume.pdf
-
-      - name: Upload PDF as artifact
+      - name: Upload PDFs as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Resume
-          path: Resume.pdf
+          name: resumes
+          path: "*.pdf"
 
-      - name: Commit PDF back to repo
+      - name: Commit PDFs back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Resume.pdf
-          git diff --cached --quiet || git commit -m "chore: rebuild Resume.pdf [skip ci]"
+          git add -- *.pdf
+          git diff --cached --quiet || git commit -m "chore: rebuild resume PDFs [skip ci]"
           git push

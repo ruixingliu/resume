@@ -1,0 +1,171 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+\linespread{0.97}\selectfont
+\raggedbottom
+\justifying
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1\vspace{-3pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \textbf{#1} \hfill \textbf{#2} \\
+    \textit{\small#3} \hfill \textit{\small #4} \vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \textit{\small#1} \hfill \textit{\small #2} \vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \small#1 \hfill #2 \vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Ruixing Liu} \\ \vspace{1pt}
+    \small Evanston, IL $|$ +1 510-703-9340 $|$ \href{mailto:ruixingliu2027@u.northwestern.edu}{{ruixingliu2027@u.northwestern.edu}} $|$
+    \href{https://linkedin.com/in/ruixing46}{{linkedin.com/in/ruixing46}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northwestern University}{Evanston, IL}
+      {B.A. in Economics, Cognitive Science and Political Science}{Expected Jun 2027}
+    \resumeItemListStart
+        \resumeItem{GPA: 3.98/4.0, Dean's List (All Quarters); SAT: 1550 (Reading 760, Math 790)}
+        \resumeItem{Courses: Causal Inference, Statistical Research Methods, Applied Econometrics, Microeconomics, Behavioral Economics, Data Visualization, Data Science for Social Science, Independent Study, Field Studies of Law}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Zhejiang University}{Hangzhou, China}
+      {B.A. in Spanish and Legal Studies}{Aug 2023 -- Jun 2025}
+      \resumeItemListStart
+        \resumeItem{GPA: 3.90/4.0}
+        \resumeItem{Selected for a competitive year-long academic exchange at the \textbf{University of Pennsylvania}; GPA: 3.93/4.0}
+        \resumeItem{Courses: Advanced Mathematics, Intro to Computer Programming, Negotiations, Advanced Spanish }
+      \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Northwestern University, Institute for Policy Research}{Evanston, IL}
+      {Research Assistant (PI: Prof. Bernard Black)}{May 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Developed 10+ Python and Playwright scrapers to pull and normalize court records from non-standard county court sites, building a combined 200,000+ row database that powers the team's country-wide guardianship research}
+        \resumeItem{Built an AI-skill tool with Claude that reads each site's layout and auto-generates a working scraper, letting the team onboard each new county or state site in a fraction of the time and cutting scraper-building time by around 40\%}
+        \resumeItem{Ran initial analysis on 100,000+ entry datasets, building 10+ R and Excel visualizations to surface early patterns and data issues that supported the team's downstream causal inference analysis in Stata to drive guardianship reform}
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Northwestern University}{Evanston, IL}
+      {Independent Researcher, Weinberg Research Grant (Advisor: Prof. Jonathan Koehler)}{Feb 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Awarded \$1,000 in competitive research funding to independently design and run the full empirical, quantitative analysis}
+        \resumeItem{Wrote an R script to scrape, flag, and filter 700+ federal court rulings down to the 100+ cases featuring the expert-testimony challenges central to the study, replacing weeks of slow manual review with an automatic screen}
+        \resumeItem{Built a semi-automated pipeline pairing Claude Code with R to follow a reading protocol, extract ruling text into an original 200+ record dataset, and auto-code structured variables, cutting manual collection time by roughly 50\%}
+        \resumeItem{Ran logistic regression and built visualizations in R, uncovering a halo-effect mechanism in expert-testimony admissibility}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {King \& Wood Mallesons}{Beijing, China}
+      {Legal Intern}{Jun 2024 -- Aug 2024}
+      \resumeItemListStart
+        \resumeItem{Researched cross-border aircraft-finance regulations across precedent cases, distilling dense statutory, regulatory, and case-law analysis into 10+ memos and risk assessments that directly supported \$30M+ in aircraft-leasing transactions}
+        \resumeItem{Built automated Excel comparison models using R to reconcile 10,000+ client data entries across deals, cutting manual verification time by 40\% per cycle while improving the accuracy and audit trail of the underlying transaction records}
+        \resumeItem{Conducted due diligence on 3 cross-border deals, dissecting corporate bylaws, shareholder structures, capitalization tables, and investor records to surface the legal and financial risks that shaped the deal team's structuring decisions}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Leadership \& Extracurricular}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {The Daily Northwestern}{Evanston, IL}
+      {Data Reporter}{Sep 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Analyzed multi-year district education data to surface proficiency and demographic trends for evidence-based reporting}
+        \resumeItem{Built 15+ interactive R, Tableau, and Power BI visualizations turning raw data into stories read by 1,000+ readers}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Pennsylvania}{Philadelphia, PA}
+      {Campus Tour Guide}{Aug 2024 -- Jun 2025}
+      \resumeItemListStart
+        \resumeItem{Planned routes and led campus orientation tours for 3 successive cohorts of incoming international exchange students}
+        \resumeItem{Acted as new students' first point of contact, fielding logistical and academic questions throughout their transition}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Zhejiang University Student Association}{Hangzhou, China}
+      {Director of Events}{Sep 2023 -- Jun 2024}
+      \resumeItemListStart
+        \resumeItem{Planned and led 10+ cultural and diversity events, directing a 10+ person team and its budget to reach 100+ attendees}
+        \resumeItem{Coordinated intramural sports programming, organizing scheduling, logistics, and season-long participation across teams}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Skills \& Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Mandarin (Native), Spanish (Intermediate) $|$ \textbf {Programming Languages}{: Python, SQL, R} \\
+     \textbf{Data Visualization \& Analytics}{: Tableau, Power BI, HTML/CSS, Stata} $|$
+     \textbf{Legal Research}{: Westlaw, LexisNexis} \\
+     \textbf{Developer/Designer Tools}{: Github, VS Code, Figma, Microsoft Office Suite \& Google Workspace, Canvas} \\
+     \textbf{Beyond Resume}{: I play soccer, rock climbing, listen to Britpop and indie rock, and am also a foodie and AvGeek } \\
+    }}}
+ \end{itemize}
+
+\end{document}
