@@ -23,7 +23,6 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: "*.tex"
-          glob_root_file: true
 
       - name: Upload PDFs as artifact
         uses: actions/upload-artifact@v4
