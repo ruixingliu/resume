@@ -43,10 +43,19 @@ jobs:
           name: resumes
           path: "*.pdf"
 
-      - name: Commit PDFs back to repo
+      - name: Commit PDFs back to repo (and prune orphans)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 删掉根目录里找不到对应 .tex 源文件的孤儿 PDF (重命名/删除后自愈)
+          for pdf in *.pdf; do
+            [ -e "$pdf" ] || continue
+            base=$(basename "$pdf" .pdf)
+            if [ -z "$(find src -type f -name "$base.tex" -print -quit)" ]; then
+              echo "Pruning orphan PDF (no matching src/**/$base.tex): $pdf"
+              git rm --quiet --ignore-unmatch -- "$pdf" || rm -f -- "$pdf"
+            fi
+          done
           git add -- *.pdf
           git diff --cached --quiet || git commit -m "chore: rebuild resume PDFs [skip ci]"
           git push
