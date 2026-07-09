@@ -19,10 +19,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile every .tex resume in the repo root
+      - name: Compile every .tex resume in src/
         uses: xu-cheng/latex-action@v3
         with:
+          working_directory: src
           root_file: "*.tex"
+
+      - name: Move compiled PDFs to repo root
+        run: mv src/*.pdf .
 
       - name: Upload PDFs as artifact
         uses: actions/upload-artifact@v4
